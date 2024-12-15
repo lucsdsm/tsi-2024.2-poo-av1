@@ -6,7 +6,7 @@
                 <strong> {{jogo.titulo}} </strong> - {{jogo.fabricante}} ({{jogo.anoPublicacao}})
                 <p> {{jogo.exibirRegras()}} </p>
             </div>
-            <button class="btn" (click)="removerJogo(jogo.titulo)"> <img src="https://cdn-icons-png.flaticon.com/512/6932/6932392.png" style="width: 32px;"> </button>
+            <button class="btn" (click)="removerJogo(jogo.titulo)"> <img src="https://cdn-icons-png.flaticon.com/512/7778/7778893.png" style="width: 32px;"> </button>
         </li>
     </ul>
 
@@ -14,7 +14,7 @@
 
         <div class="form-group mb-3">
             <label for="titulo">Título</label>
-            <input type="text" id="titulo" class="form-control" [(ngModel)]="titulo" name="titulo" required />
+            <input type="text" id="titulo" class="form-control" [(ngModel)]="titulo" name="titulo" required placeholder="Título"/>
         </div>
 
         <div class="form-group mb-3">
@@ -47,7 +47,8 @@
             <label for="idadeMinima">Idade Mínima</label>
             <input type="number" id="idadeMinima" class="form-control" [(ngModel)]="idadeMinima" name="idadeMinima" />
         </div>
+        <br>
+        <button type="submit" class="btn btn-dark">Adicionar Jogo</button>
 
-        <button type="submit" class="btn btn-primary">Adicionar Jogo</button>
     </form>
 </div>

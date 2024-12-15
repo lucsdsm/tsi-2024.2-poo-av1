@@ -1,5 +1,25 @@
 .container {
     background-color: #7289da !important;
     padding-bottom: 1rem;
-    
+    justify-items: center;
+}
+
+.container li {
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.container form {
+    background-color: #7289da !important;
+    border: 0px;
+    color: white;
+    width: 50%;
+}
+
+.container form input {
+    border-radius: 10px;
+}
+
+.container form button {
+    border-radius: 10px;
 }
