@@ -9,7 +9,7 @@ import { FormsModule, NgModel } from '@angular/forms';
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [],
+  imports: [NgFor, NgIf, FormsModule],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
@@ -19,13 +19,12 @@ export class BodyComponent {
   titulo = '';
   anoPublicacao = 0;
   fabricante = '';
-  numeroJogadores?: number;
-  idadeMinima?: number;
+  numeroJogadores?: '';
+  idadeMinima?: '';
   tipo = 'tabuleiro'; // Valor padrão
 
   constructor() {
     // Adicionando jogos para teste
-    this.biblioteca.adicionarJogo(new Tabuleiro('Catan', 1995, 'Kosmos', 4));
     this.biblioteca.adicionarJogo(new Carta('UNO', 1971, 'Mattel', 7));
   }
 
@@ -54,7 +53,7 @@ export class BodyComponent {
     this.titulo = '';
     this.anoPublicacao = 0;
     this.fabricante = '';
-    this.numeroJogadores = undefined;
-    this.idadeMinima = undefined;
+    this.numeroJogadores = '';
+    this.idadeMinima = '';
   }
 }

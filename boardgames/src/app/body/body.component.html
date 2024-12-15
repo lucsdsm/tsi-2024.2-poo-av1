@@ -1,0 +1,53 @@
+<div class="container">
+
+    <ul class="list-group mb-4">
+        <li *ngFor="let jogo of jogos" class="list-group-item d-flex justify-content-between">
+            <div>
+                <strong> {{jogo.titulo}} </strong> - {{jogo.fabricante}} ({{jogo.anoPublicacao}})
+                <p> {{jogo.exibirRegras()}} </p>
+            </div>
+            <button class="btn" (click)="removerJogo(jogo.titulo)"> <img src="https://cdn-icons-png.flaticon.com/512/6932/6932392.png" style="width: 32px;"> </button>
+        </li>
+    </ul>
+
+    <form (ngSubmit)="adicionarJogo()" class="card card-body">
+
+        <div class="form-group mb-3">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" class="form-control" [(ngModel)]="titulo" name="titulo" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="anoPublicacao">Ano de Publicação</label>
+            <input type="number" id="anoPublicacao" class="form-control" [(ngModel)]="anoPublicacao"
+                name="anoPublicacao" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="fabricante">Fabricante</label>
+            <input type="text" id="fabricante" class="form-control" [(ngModel)]="fabricante" name="fabricante"
+                required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="tipo">Tipo de Jogo</label>
+            <select id="tipo" class="form-control" [(ngModel)]="tipo" name="tipo">
+                <option value="tabuleiro">Tabuleiro</option>
+                <option value="carta">Cartas</option>
+            </select>
+        </div>
+
+        <div *ngIf="tipo === 'tabuleiro'" class="form-group mb-3">
+            <label for="numeroJogadores">Número de Jogadores</label>
+            <input type="number" id="numeroJogadores" class="form-control" [(ngModel)]="numeroJogadores"
+                name="numeroJogadores" />
+        </div>
+
+        <div *ngIf="tipo === 'carta'" class="form-group mb-3">
+            <label for="idadeMinima">Idade Mínima</label>
+            <input type="number" id="idadeMinima" class="form-control" [(ngModel)]="idadeMinima" name="idadeMinima" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Adicionar Jogo</button>
+    </form>
+</div>

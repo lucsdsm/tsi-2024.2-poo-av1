@@ -9,6 +9,6 @@ export class Carta extends Jogo {
     ) { super(titulo, anoPublicacao, fabricante); }
 
     exibirRegras(): string {
-        return `Regras do jogo de cartas "${this.titulo}": Idade mínima recomendada é ${this.idadeMinima} anos.`;
+        return `Regras do jogo de cartas "${this.titulo}": Idade mínima recomendada é de ${this.idadeMinima} anos.`;
     }
 }

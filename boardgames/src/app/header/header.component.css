@@ -1,5 +1,6 @@
 nav {
     background-color: #7289da !important;
+    padding: 2rem;
 }
 
 nav a {
@@ -7,5 +8,4 @@ nav a {
     color: white;
     font-weight: bolder;
     font-size: 24px;
-    margin-top: 5px;
 }
