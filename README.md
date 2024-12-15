@@ -83,12 +83,3 @@ O sistema permite gerenciar uma biblioteca de jogos de tabuleiro. Ele é compost
 
 ---
 
-## Execução
-
-### Backend
-1. Implemente as classes e garanta o funcionamento dos métodos.
-
-### Front-end
-1. Crie o projeto Angular:
-   ```bash
-   ng new biblioteca-jogos
